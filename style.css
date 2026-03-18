@@ -583,6 +583,25 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
   font-weight: 500;
 }
 
+/* Case Study Layout */
+.case-study .case-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+.case-block { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; }
+.case-block p { font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+.case-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 8px; display: block; }
+.case-did { margin: 16px 0; }
+.case-impact { margin: 16px 0 20px; }
+.impact-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.impact-chip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  background: rgba(6,182,212,0.1);
+  border: 1px solid rgba(6,182,212,0.25);
+  border-radius: 100px;
+  color: #67e8f9;
+}
+@media (max-width: 600px) { .case-study .case-row { grid-template-columns: 1fr; } }
+
 /* Certifications */
 .certs-section { margin-top: 16px; }
 .certs-title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 28px; }
