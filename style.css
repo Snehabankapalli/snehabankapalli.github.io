@@ -299,20 +299,21 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
   align-items: center;
   justify-content: center;
   gap: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
-.stat { text-align: center; padding: 0 28px; }
+.stat { text-align: center; padding: 0 20px; white-space: nowrap; }
 .stat-num {
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.04em;
   line-height: 1;
 }
-.stat-plus { color: var(--accent-light); font-size: 1.8rem; font-weight: 800; }
-.stat p { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; font-weight: 500; }
-.stat-divider { width: 1px; height: 48px; background: var(--border); }
+.stat-plus { color: var(--accent-light); font-size: 1.5rem; font-weight: 800; }
+.stat p { font-size: 0.75rem; color: var(--text-muted); margin-top: 5px; font-weight: 500; }
+.stat-divider { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
 
 .hero-scroll-hint {
   position: absolute;
@@ -965,6 +966,10 @@ textarea { resize: vertical; min-height: 120px; }
   margin: 12px auto 0;
   line-height: 1.7;
 }
+.projects-quick-links { margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.quick-link { font-size: 0.82rem; color: var(--accent-light); text-decoration: none; font-weight: 500; transition: opacity 0.2s; }
+.quick-link:hover { opacity: 0.7; }
+.quick-sep { color: var(--text-muted); font-size: 0.82rem; }
 
 /* ============================================================
    VALUE / WHY ME SECTION

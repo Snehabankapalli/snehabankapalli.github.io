@@ -117,11 +117,9 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 const titles = [
   'Data Engineer',
   'Pipeline Architect',
-  'AI & Data Architect',
   'Snowflake Expert',
-  'Streaming Systems Dev',
-  'LLM-Augmented Engineer',
   'Cloud Data Architect',
+  'AI & Data Architect',
 ];
 let titleIndex = 0;
 let charIndex = 0;
