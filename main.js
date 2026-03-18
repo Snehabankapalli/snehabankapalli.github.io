@@ -431,7 +431,7 @@ contactForm.addEventListener('submit', async (e) => {
   btn.disabled = true;
 
   try {
-    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const res = await fetch('https://formspree.io/f/mojkpogg', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: new FormData(contactForm),
