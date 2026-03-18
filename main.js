@@ -421,21 +421,42 @@ if (heroSection) {
   terminalObserver.observe(body);
 })();
 
-/* ---------- CONTACT FORM ---------- */
+/* ---------- CONTACT FORM (Formspree) ---------- */
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = contactForm.querySelector('.form-submit');
   const orig = btn.textContent;
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = '#059669';
+  btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = orig;
-    btn.style.background = '';
-    btn.disabled = false;
-    contactForm.reset();
-  }, 3000);
+
+  try {
+    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(contactForm),
+    });
+    if (res.ok) {
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = '#059669';
+      contactForm.reset();
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+    } else {
+      throw new Error('Failed');
+    }
+  } catch {
+    btn.textContent = 'Failed — try emailing directly';
+    btn.style.background = '#dc2626';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
+  }
 });
 
 /* ---------- SMOOTH SCROLL ---------- */
