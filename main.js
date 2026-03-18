@@ -102,18 +102,6 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-/* ---------- OTW BADGE — hide near contact ---------- */
-const otwBadge = document.getElementById('otwBadge');
-const contactSection = document.getElementById('contact');
-if (otwBadge && contactSection) {
-  const otwObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      otwBadge.style.opacity = e.isIntersecting ? '0' : '1';
-      otwBadge.style.pointerEvents = e.isIntersecting ? 'none' : '';
-    });
-  }, { threshold: 0.2 });
-  otwObserver.observe(contactSection);
-}
 
 /* ---------- HAMBURGER MENU ---------- */
 const hamburger = document.getElementById('hamburger');
