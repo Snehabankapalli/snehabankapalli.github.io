@@ -1128,3 +1128,60 @@ textarea { resize: vertical; min-height: 120px; }
 .system-details .impact-chips {
   margin-top: 4px;
 }
+
+/* ---------- ARCHITECTURE DIAGRAM ---------- */
+.arch-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(167,139,250,0.2);
+  border-radius: 8px;
+}
+.arch-node {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(167,139,250,0.15);
+  border: 1px solid rgba(167,139,250,0.35);
+  color: #c4b5fd;
+  white-space: nowrap;
+}
+.arch-arr {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* ---------- OTHER WORK SECTION ---------- */
+.other-work {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.other-work-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+.other-work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.other-work-grid .project-card {
+  padding: 20px;
+  border-radius: 10px;
+}
+.other-work-grid .project-card h3 {
+  font-size: 0.95rem;
+}
+.other-work-grid .project-card p {
+  font-size: 0.83rem;
+}
