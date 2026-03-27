@@ -1061,3 +1061,70 @@ textarea { resize: vertical; min-height: 120px; }
   .timeline-header { flex-direction: column; }
   .contact-form-wrapper { padding: 24px; }
 }
+
+/* ---------- SKILL BUCKETS ---------- */
+.skills-buckets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 12px;
+}
+.skill-bucket {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 24px;
+}
+.bucket-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #a78bfa;
+  margin-bottom: 16px;
+}
+.bucket-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.bucket-tags span {
+  font-size: 0.82rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(167,139,250,0.1);
+  border: 1px solid rgba(167,139,250,0.25);
+  color: #e2e8f0;
+}
+
+/* ---------- SYSTEM CARD DETAILS ---------- */
+.system-statement {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.system-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.system-block { }
+.system-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7dd3fc;
+  margin-bottom: 4px;
+}
+.arch-flow {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.82rem;
+  color: #a78bfa;
+}
+.system-details .impact-chips {
+  margin-top: 4px;
+}
