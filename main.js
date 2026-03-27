@@ -291,7 +291,8 @@ function animateSkillBars(panel) {
     requestAnimationFrame(() => requestAnimationFrame(() => bar.classList.add('animated')));
   });
 }
-animateSkillBars(document.getElementById('tab-data'));
+const defaultPanel = document.getElementById('tab-data');
+if (defaultPanel) animateSkillBars(defaultPanel);
 
 /* ---------- COUNTER ANIMATION ---------- */
 function animateCounter(el) {
