@@ -1185,3 +1185,215 @@ textarea { resize: vertical; min-height: 120px; }
 .other-work-grid .project-card p {
   font-size: 0.83rem;
 }
+
+/* ============================================================
+   NEW HERO ELEMENTS
+   ============================================================ */
+.hero-subtitle {
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+.hero-description {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 0 auto 24px;
+  color: var(--text-secondary);
+}
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 28px;
+}
+.hero-highlights span {
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.03);
+}
+
+/* ============================================================
+   ABOUT — NARROW SINGLE COLUMN
+   ============================================================ */
+.about-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.about-narrow p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+}
+.about-narrow .about-lead {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.about-pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+.about-pill-grid span {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.03);
+}
+
+/* ============================================================
+   NEW PROJECT CARDS
+   ============================================================ */
+.projects-grid-new {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.project-card-new {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.75rem;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.25s, background 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.project-card-new:hover {
+  border-color: var(--border-hover);
+  background: rgba(124,58,237,0.04);
+}
+.project-card-new.featured-new {
+  grid-column: span 2;
+}
+.project-kicker {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: 0.6rem;
+}
+.project-card-new h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+.project-card-new > p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.project-bullets {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+.project-gh-link {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  transition: opacity 0.2s;
+}
+.project-gh-link:hover { opacity: 0.75; }
+@media (max-width: 860px) {
+  .projects-grid-new,
+  .project-card-new.featured-new { grid-column: span 1; }
+  .projects-grid-new { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   SYSTEM DESIGN SECTION
+   ============================================================ */
+.design-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.design-narrow > p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.architecture-line {
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  background: rgba(255,255,255,0.02);
+  color: var(--accent-light);
+  font-family: 'Fira Code', monospace;
+  margin-bottom: 2rem;
+}
+.design-principles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.design-principle {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+}
+.design-principle h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+.design-principle p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .design-principles { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   EXPERIENCE — EXP SUMMARY
+   ============================================================ */
+.exp-summary {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+
+/* ============================================================
+   CONTACT — SIMPLE
+   ============================================================ */
+.contact-simple {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-simple .contact-lead {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.contact-simple-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
