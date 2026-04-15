@@ -21,535 +21,258 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- SCROLL PROGRESS -->
-  <div id="scrollProgress"></div>
-
-  <!-- CURSOR -->
-  <div id="cursorDot"></div>
-  <div id="cursorGlow"></div>
 
   <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">SB<span class="dot">.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#systems">Systems</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+  <nav class="site-nav">
+    <div class="page-container nav-inner">
+      <a href="#" class="nav-logo">SB.</a>
+      <div class="nav-links">
+        <a href="#systems">Systems</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#experience" class="mobile-link">Experience</a></li>
-      <li><a href="#systems" class="mobile-link">Systems</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
-    </ul>
-  </div>
+  <main class="portfolio-page">
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg">
-      <canvas id="particleCanvas"></canvas>
-    </div>
-    <div class="hero-content">
-      <p class="hero-greeting" data-aos="fade-up">Hello, I'm</p>
-      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">Sneha Bankapalli</h1>
-      <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Senior Data Engineer — Data Platforms, Fintech, and AI-Augmented Engineering</h2>
-      <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-        I build production-grade data systems that are fast, reliable, and cheap to operate —
-        from high-volume fintech event pipelines to regulated healthcare platforms and AI-assisted engineering systems.
-      </p>
-      <div class="hero-highlights" data-aos="fade-up" data-aos-delay="380">
-        <span>100M+ daily events</span>
-        <span>83% faster pipelines</span>
-        <span>$140K+ annual savings</span>
-        <span>99.9% SLA</span>
-      </div>
-      <div class="hero-actions" data-aos="fade-up" data-aos-delay="450">
-        <a href="#systems" class="btn btn-primary magnetic">View Selected Work</a>
-        <a href="Sneha_Bankapalli_Resume.pdf" class="btn btn-secondary magnetic" target="_blank">Download Resume</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- IMPACT MARQUEE -->
-  <div class="impact-strip">
-    <div class="marquee-track">
-      <div class="marquee-inner" id="marqueeInner">
-        <span class="impact-item"><span class="impact-num">100M+</span> Daily Events Processed</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">83%</span> Pipeline Performance Improvement</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">$140K+</span> Annual Cost Savings</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">99.9%</span> Pipeline SLA</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">200+</span> Business Users Enabled</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">50M+</span> Patient Records Processed</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">10TB+</span> Monthly Data Ingestion</span>
-        <span class="impact-sep">◆</span>
-        <span class="impact-item"><span class="impact-num">7+</span> Years Production Engineering</span>
-        <span class="impact-sep">◆</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Who I Am</span>
-        <h2 class="section-title">About Me</h2>
-      </div>
-      <div class="about-narrow" data-aos="fade-up">
-        <p class="about-lead">
-          I'm a Senior Data Engineer with 7+ years of experience building data platforms in
-          regulated industries including fintech, healthcare, telecom, and banking.
-        </p>
-        <p>
-          My strongest work sits at the intersection of platform engineering, analytics infrastructure,
-          and production reliability. I've owned systems that process high-volume event streams,
-          power regulatory reporting, enforce data quality, and reduce infrastructure cost at scale.
-        </p>
-        <p>
-          I work primarily with AWS, Snowflake, Spark/PySpark, Kafka, dbt, Airflow, Terraform,
-          Python, and SQL — and increasingly use AI-assisted workflows to speed up engineering
-          without lowering standards.
-        </p>
-        <div class="about-pill-grid">
-          <span>AWS + Snowflake</span>
-          <span>Spark / PySpark</span>
-          <span>Kafka + Streaming</span>
-          <span>dbt + Airflow</span>
-          <span>Terraform + CI/CD</span>
-          <span>Fintech + Healthcare</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SYSTEMS -->
-  <section id="systems" class="section section-dark">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Engineering Work</span>
-        <h2 class="section-title">Selected Work</h2>
-        <div class="projects-quick-links">
-          <a href="https://github.com/Snehabankapalli" target="_blank" rel="noopener" class="quick-link">View GitHub</a>
-          <span class="quick-sep">·</span>
-          <a href="Sneha_Bankapalli_Resume.pdf" download class="quick-link">Download Resume</a>
-        </div>
-      </div>
-      <div class="projects-grid-new">
-
-        <article class="project-card-new featured-new" data-aos="fade-up">
-          <p class="project-kicker">Flagship Platform</p>
-          <h3>AI / Data Engineering Platform</h3>
-          <p>
-            A multi-repo engineering platform spanning AI agents, data pipelines, and RAG-style
-            tooling with standardized testing, CI, and mocked external dependencies.
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="page-container">
+        <div class="hero-block">
+          <p class="section-kicker">Senior Data Engineer</p>
+          <h1>Sneha Bankapalli</h1>
+          <p class="hero-subtext">
+            I build production-grade data platforms across fintech, healthcare, and large-scale regulated systems.
           </p>
-          <ul class="project-bullets">
-            <li>~200+ tests across 5 repositories</li>
-            <li>GitHub Actions CI with pytest, flake8, mypy, and SQLFluff</li>
-            <li>Mocked OpenAI, Anthropic, Snowflake, Slack, and HTTP services</li>
-            <li>Standardized quality and reliability patterns across repos</li>
-          </ul>
-          <div class="project-tech">
-            <span>Python</span><span>Pytest</span><span>CI/CD</span><span>Snowflake</span><span>LLM APIs</span>
-          </div>
-          <div style="display:flex;gap:1.25rem;margin-top:auto;padding-top:1rem;align-items:center;">
-            <a href="project-ai-de-platform.html" class="project-gh-link" style="padding-top:0;">Read case study &rarr;</a>
-            <a href="https://github.com/Snehabankapalli/genai-de-portfolio" target="_blank" rel="noopener" style="font-size:0.82rem;color:var(--text-muted);transition:color 0.2s;" onmouseover="this.style.color='var(--accent-light)'" onmouseout="this.style.color='var(--text-muted)'">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project-card-new" data-aos="fade-up" data-aos-delay="80">
-          <h3>Real-Time Fintech Pipeline</h3>
-          <p>
-            Kafka &rarr; Spark &rarr; Snowflake pipeline for transaction-style event processing with
-            production-minded patterns for latency, reliability, and privacy-aware workflows.
-          </p>
-          <ul class="project-bullets">
-            <li>Streaming ingestion and transformation</li>
-            <li>PII tokenization and testing support</li>
-            <li>Warehouse serving layer for analytics and reporting</li>
-          </ul>
-          <div class="project-tech">
-            <span>Kafka</span><span>Spark</span><span>Snowflake</span><span>AWS</span>
-          </div>
-          <a href="https://github.com/Snehabankapalli/real-time-fintech-pipeline-kafka-spark-snowflake" target="_blank" rel="noopener" class="project-gh-link">View on GitHub &rarr;</a>
-        </article>
-
-        <article class="project-card-new" data-aos="fade-up" data-aos-delay="120">
-          <h3>Fintech Data Platform</h3>
-          <p>
-            Warehouse-oriented analytics engineering setup with schema validation,
-            SQL quality enforcement, and reusable platform structure for governed data systems.
-          </p>
-          <ul class="project-bullets">
-            <li>SQLFluff + schema validation in CI</li>
-            <li>Analytics engineering foundations</li>
-            <li>Production-minded repo organization</li>
-          </ul>
-          <div class="project-tech">
-            <span>dbt</span><span>SQL</span><span>GitHub Actions</span><span>Data Quality</span>
-          </div>
-          <a href="https://github.com/Snehabankapalli/fintech-data-platform" target="_blank" rel="noopener" class="project-gh-link">View on GitHub &rarr;</a>
-        </article>
-
-        <article class="project-card-new" data-aos="fade-up" data-aos-delay="160">
-          <h3>GenAI Data Engineering Portfolio</h3>
-          <p>
-            Retrieval and embedding workflows built with a software engineering mindset,
-            including tested chunking and embedding components for data engineering use cases.
-          </p>
-          <ul class="project-bullets">
-            <li>Chunking and embedding pipeline components</li>
-            <li>Core retrieval testing with mocked LLM APIs</li>
-            <li>AI-assisted engineering with production code quality</li>
-          </ul>
-          <div class="project-tech">
-            <span>Embeddings</span><span>RAG</span><span>Python</span><span>Testing</span>
-          </div>
-          <a href="https://github.com/Snehabankapalli/genai-de-portfolio" target="_blank" rel="noopener" class="project-gh-link">View on GitHub &rarr;</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SYSTEM DESIGN -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">System Design</span>
-        <h2 class="section-title">How I Design Data Systems</h2>
-      </div>
-      <div class="design-narrow" data-aos="fade-up">
-        <p>
-          I design systems with clear separation between ingestion, transformation, storage, and serving layers,
-          with observability, testing, and data quality built in from day one.
-        </p>
-        <div class="architecture-line">
-          Kafka &rarr; Spark &rarr; S3 &rarr; Snowflake &rarr; dbt &rarr; BI
-        </div>
-        <div class="design-principles">
-          <div class="design-principle">
-            <h4>Ingestion</h4>
-            <p>Event-driven with schema validation, DLQ routing, and idempotent producers</p>
-          </div>
-          <div class="design-principle">
-            <h4>Transformation</h4>
-            <p>Incremental models, PII masking at the boundary, dbt for warehouse logic</p>
-          </div>
-          <div class="design-principle">
-            <h4>Reliability</h4>
-            <p>Automated quality checks, SLA monitoring, Slack alerting, self-healing retries</p>
-          </div>
-          <div class="design-principle">
-            <h4>Cost</h4>
-            <p>Serverless-first (EMR Serverless, Glue), Snowflake warehouse sizing, S3 tiering</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#resume" class="btn-secondary">Download Resume</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Career</span>
-        <h2 class="section-title">Experience</h2>
+    <!-- EXPLORE MY WORK -->
+    <section class="portfolio-nav-section">
+      <div class="page-container">
+        <div class="section-header">
+          <p class="section-kicker">Explore My Work</p>
+          <h2>A focused view of how I build systems, ship projects, and deliver business impact.</h2>
+        </div>
+        <div class="portfolio-nav-grid">
+          <a href="#systems" class="portfolio-nav-card">
+            <div class="portfolio-nav-icon">◈</div>
+            <h3>Systems</h3>
+            <p>Architecture decisions, platform thinking, and reliability-first design</p>
+            <span>View section →</span>
+          </a>
+          <a href="#projects" class="portfolio-nav-card">
+            <div class="portfolio-nav-icon">□</div>
+            <h3>Projects</h3>
+            <p>Hands-on builds across data engineering, analytics, and AI workflows</p>
+            <span>View section →</span>
+          </a>
+          <a href="#experience" class="portfolio-nav-card">
+            <div class="portfolio-nav-icon">△</div>
+            <h3>Experience</h3>
+            <p>Production work in fintech, healthcare, and large-scale data systems</p>
+            <span>View section →</span>
+          </a>
+          <a href="#resume" class="portfolio-nav-card">
+            <div class="portfolio-nav-icon">▣</div>
+            <h3>Resume</h3>
+            <p>Full background, technical stack, and downloadable resume</p>
+            <span>View section →</span>
+          </a>
+        </div>
       </div>
-      <div class="timeline">
+    </section>
 
-        <!-- ROLE 1 -->
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Senior Data Engineer</h3>
-                <span class="timeline-company">Fintech Company</span>
-              </div>
-              <span class="timeline-date">Apr 2025 – Present</span>
-            </div>
-            <p class="exp-summary">Owned the credit card data platform for a high-volume financial system processing 100M+ daily events across transactions, payments, and collections.</p>
-            <ul class="timeline-bullets">
-              <li>Rebuilt Snowflake pipelines from 24 hours to 4 hours, improving reporting timeliness by <strong>83%</strong></li>
-              <li>Delivered <strong>$140K+ annual cost savings</strong> while improving dashboard performance by 60%</li>
-              <li>Managed AWS and Snowflake infrastructure using Terraform across dev, staging, and production</li>
-              <li>Maintained <strong>99.9% SLA</strong> through orchestration, monitoring, and fault-tolerant pipeline design</li>
+    <!-- SYSTEMS -->
+    <section id="systems" class="content-section">
+      <div class="page-container">
+        <div class="section-header">
+          <p class="section-kicker">Systems</p>
+          <h2>How I think about data systems</h2>
+          <p class="section-subtext">
+            Architecture, reliability, and production-minded design across batch, streaming, and analytics workflows.
+          </p>
+        </div>
+
+        <div class="system-architecture-card">
+          <div class="architecture-flow">
+            <div class="flow-node">Ingestion</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">Processing</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">Warehouse</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">Quality</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">Analytics</div>
+          </div>
+        </div>
+
+        <div class="three-card-grid">
+          <div class="info-card">
+            <h3>Platform Design</h3>
+            <p>Designing scalable data flows with clear boundaries across ingestion, transformation, orchestration, and consumption.</p>
+          </div>
+          <div class="info-card">
+            <h3>Reliability</h3>
+            <p>Building with observability, validation, SLAs, and operational discipline so pipelines stay trustworthy in production.</p>
+          </div>
+          <div class="info-card">
+            <h3>Execution</h3>
+            <p>Balancing speed, maintainability, and cost with practical engineering choices that hold up beyond demos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="content-section">
+      <div class="page-container">
+        <div class="section-header">
+          <p class="section-kicker">Projects</p>
+          <h2>Selected projects</h2>
+          <p class="section-subtext">
+            A focused set of builds that show implementation depth across data engineering and platform design.
+          </p>
+        </div>
+
+        <div class="three-card-grid">
+          <a href="project-ai-de-platform.html" class="project-card">
+            <h3>AI Data Engineering Platform</h3>
+            <p>Production-style platform showcasing data workflows, engineering structure, and AI-assisted development patterns.</p>
+            <small>Python · Spark · Snowflake · dbt · CI/CD</small>
+            <span>View Project →</span>
+          </a>
+          <a href="https://github.com/Snehabankapalli/real-time-fintech-pipeline-kafka-spark-snowflake" target="_blank" rel="noreferrer" class="project-card">
+            <h3>Real-Time Fintech Pipeline</h3>
+            <p>1M+ events/day financial transaction pipeline with streaming ingestion, transformation, and downstream analytics.</p>
+            <small>Kafka · PySpark · AWS · Snowflake</small>
+            <span>View Project →</span>
+          </a>
+          <a href="https://github.com/Snehabankapalli/fintech-data-platform" target="_blank" rel="noreferrer" class="project-card">
+            <h3>Fintech Data Platform</h3>
+            <p>Analytics-focused implementation covering dbt transformation layers, modeling strategy, and performance-aware warehouse design.</p>
+            <small>Snowflake · dbt · SQL · Airflow</small>
+            <span>View Project →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="content-section">
+      <div class="page-container">
+        <div class="section-header">
+          <p class="section-kicker">Experience</p>
+          <h2>Production experience</h2>
+          <p class="section-subtext">
+            Work across fintech, healthcare, and large-scale regulated data environments with measurable business impact.
+          </p>
+        </div>
+
+        <div class="three-card-grid">
+          <div class="experience-card">
+            <h3>Fintech Company</h3>
+            <p class="experience-domain">Credit Card Data Platform</p>
+            <ul>
+              <li>Reduced batch processing from 24 hours to 4 hours</li>
+              <li>Drove major cost and performance improvements in production</li>
             </ul>
-            <div class="timeline-tags">
-              <span>Snowflake</span><span>dbt</span><span>Airflow</span><span>AWS EMR</span><span>Terraform</span><span>Python</span>
-            </div>
+            <small>Snowflake · dbt · Airflow · Terraform · AWS</small>
           </div>
-        </div>
-
-        <!-- ROLE 2 -->
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Senior Data Engineer</h3>
-                <span class="timeline-company">Healthcare Company (Fortune 10)</span>
-              </div>
-              <span class="timeline-date">Dec 2021 – Apr 2025</span>
-            </div>
-            <p class="exp-summary">Built HIPAA-compliant cloud pipelines supporting healthcare analytics and regulatory reporting at scale.</p>
-            <ul class="timeline-bullets">
-              <li>Processed <strong>50M+ patient records</strong> from healthcare APIs using AWS, Airflow, dbt, and Snowflake</li>
-              <li>Maintained <strong>99.95% uptime</strong> across 10TB+ monthly claims and enrollment workloads</li>
-              <li>Implemented automated validation and PII masking frameworks for high-trust reporting systems</li>
-              <li>Improved dashboard performance by <strong>60%</strong> through Snowflake optimization strategies</li>
+          <div class="experience-card">
+            <h3>Healthcare Fortune 10</h3>
+            <p class="experience-domain">Regulated Data Systems</p>
+            <ul>
+              <li>Built HIPAA-compliant pipelines for large-scale healthcare datasets</li>
+              <li>Maintained high uptime and strong reporting accuracy</li>
             </ul>
-            <div class="timeline-tags">
-              <span>AWS Glue</span><span>S3</span><span>HIPAA</span><span>Python</span><span>Airflow</span><span>dbt</span><span>Snowflake</span>
-            </div>
+            <small>AWS · Snowflake · Python · Airflow · Data Quality</small>
           </div>
-        </div>
-
-        <!-- EARLIER ROLES -->
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Earlier Roles</h3>
-                <span class="timeline-company">Telecom, Software, and Banking</span>
-              </div>
-              <span class="timeline-date">2017 – 2021</span>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Built Kafka and Spark pipelines for telecom analytics and event processing</li>
-              <li>Developed data models and ETL workflows across Snowflake, BigQuery, SQL, and Python</li>
-              <li>Supported credit risk analytics and regulatory reporting in banking environments</li>
+          <div class="experience-card">
+            <h3>Earlier Experience</h3>
+            <p class="experience-domain">Telecom · Banking · Data Foundations</p>
+            <ul>
+              <li>Built streaming and analytics pipelines across multiple domains</li>
+              <li>Strengthened distributed processing, SQL, and production engineering depth</li>
             </ul>
-            <div class="timeline-tags">
-              <span>Kafka</span><span>Spark</span><span>Snowflake</span><span>Python</span><span>SQL</span><span>BigQuery</span>
-            </div>
+            <small>Kafka · Spark · SQL · Banking · Telecom</small>
           </div>
         </div>
-
       </div>
+    </section>
 
-      <!-- Certifications -->
-      <div class="certs-section" data-aos="fade-up">
-        <h3 class="certs-title">Certifications</h3>
-        <div class="certs-grid">
-          <div class="cert-card">
-            <div class="cert-icon">🔷</div>
-            <div>
-              <h4>Azure Data Engineer</h4>
-              <span>DP-203 · Microsoft</span>
-            </div>
+    <!-- RESUME -->
+    <section id="resume" class="content-section">
+      <div class="page-container">
+        <div class="resume-panel">
+          <div class="section-header">
+            <p class="section-kicker">Resume</p>
+            <h2>Full background and technical depth</h2>
+            <p class="section-subtext">
+              For the complete career timeline, technical stack, certifications, and detailed role history.
+            </p>
           </div>
-          <div class="cert-card">
-            <div class="cert-icon">☁️</div>
-            <div>
-              <h4>Azure Fundamentals</h4>
-              <span>AZ-900 · Microsoft</span>
-            </div>
+          <div class="resume-actions">
+            <a href="Sneha_Bankapalli_Resume.pdf" class="btn-primary" download>Download Resume</a>
           </div>
-          <div class="cert-card">
-            <div class="cert-icon">⚙️</div>
-            <div>
-              <h4>Six Sigma</h4>
-              <span>Process Improvement</span>
+          <div class="resume-facts">
+            <div class="fact-card">
+              <h3>7+ Years</h3>
+              <p>Data engineering experience</p>
             </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon">📋</div>
-            <div>
-              <h4>ITIL Foundation</h4>
-              <span>IT Service Management</span>
+            <div class="fact-card">
+              <h3>Domains</h3>
+              <p>Fintech, healthcare, telecom, banking</p>
+            </div>
+            <div class="fact-card">
+              <h3>Focus</h3>
+              <p>Platforms, reliability, scale, performance</p>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Education -->
-      <div class="edu-section" data-aos="fade-up">
-        <h3 class="certs-title">Education</h3>
-        <div class="edu-grid">
-          <div class="edu-card">
-            <div class="edu-icon-wrap">🎓</div>
-            <div class="edu-info">
-              <h4>Master of Science in Information Technology</h4>
-              <span class="edu-school">Valparaiso University</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-icon-wrap">🎓</div>
-            <div class="edu-info">
-              <h4>Bachelor of Technology in Electronics &amp; Communication Engineering</h4>
-              <span class="edu-school">JNTUK University</span>
-            </div>
+    <!-- CONTACT -->
+    <section id="contact" class="content-section">
+      <div class="page-container">
+        <div class="contact-panel">
+          <p class="section-kicker">Contact</p>
+          <h2>Let's connect</h2>
+          <p class="section-subtext">
+            Open to senior data engineering, platform, and high-impact data infrastructure opportunities.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:sneha.bnkp@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/sneha2095/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Snehabankapalli" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ENGINEERING PRINCIPLES SECTION -->
-  <section id="value" class="section section-dark">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Engineering Philosophy</span>
-        <h2 class="section-title">Engineering Principles</h2>
-        <p class="section-subtitle">How I approach every system I build.</p>
-      </div>
-      <div class="value-grid">
-
-        <div class="value-card tilt-card" data-aos="fade-up">
-          <div class="value-icon-wrap purple">
-            <span>📐</span>
-          </div>
-          <h3>Design for Scale</h3>
-          <p>Systems should handle growth without re-architecture. I think in partitioning strategies, incremental loads, and cluster sizing from day one.</p>
-          <div class="value-tags">
-            <span>Scalable Architecture</span><span>Incremental Loads</span><span>High Throughput</span>
-          </div>
-        </div>
-
-        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="value-icon-wrap teal">
-            <span>💰</span>
-          </div>
-          <h3>Optimize for Performance and Cost</h3>
-          <p>Fast systems that are also efficient to run. Cloud spend is a product metric, not an afterthought.</p>
-          <div class="value-tags">
-            <span>FinOps</span><span>Query Optimization</span><span>Cost Reduction</span>
-          </div>
-        </div>
-
-        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="150">
-          <div class="value-icon-wrap green">
-            <span>✅</span>
-          </div>
-          <h3>Build for Data Quality</h3>
-          <p>Reliable data is more important than fast data. Quality frameworks, automated validation, and alerting are built in, not bolted on.</p>
-          <div class="value-tags">
-            <span>dbt Tests</span><span>Data Observability</span><span>SLA Monitoring</span>
-          </div>
-        </div>
-
-        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="value-icon-wrap blue">
-            <span>🔒</span>
-          </div>
-          <h3>Treat Compliance as Architecture</h3>
-          <p>In regulated domains, governance is built into the system. HIPAA compliance, audit trails, and PII masking are design requirements, not features.</p>
-          <div class="value-tags">
-            <span>HIPAA</span><span>PII Masking</span><span>Audit Logging</span>
-          </div>
-        </div>
-
-        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="250">
-          <div class="value-icon-wrap pink">
-            <span>🤖</span>
-          </div>
-          <h3>Use AI to Augment Engineering</h3>
-          <p>Automation improves speed without compromising control. AI-assisted SQL optimization, test generation, and pipeline scaffolding reduce toil and accelerate delivery.</p>
-          <div class="value-tags">
-            <span>Claude Code</span><span>Cursor</span><span>AI-Assisted Engineering</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section section-dark">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">What I Use</span>
-        <h2 class="section-title">Tech Stack</h2>
-      </div>
-      <div class="skills-buckets" data-aos="fade-up">
-
-        <div class="skill-bucket">
-          <h4 class="bucket-title">Data Systems</h4>
-          <div class="bucket-tags">
-            <span>Snowflake</span><span>dbt</span><span>Airflow</span><span>Kafka</span><span>Spark</span><span>Python</span><span>SQL</span>
-          </div>
-        </div>
-        <div class="skill-bucket">
-          <h4 class="bucket-title">Cloud &amp; Infrastructure</h4>
-          <div class="bucket-tags">
-            <span>AWS</span><span>S3</span><span>EMR Serverless</span><span>Glue</span><span>Lambda</span><span>Terraform</span>
-          </div>
-        </div>
-        <div class="skill-bucket">
-          <h4 class="bucket-title">Reliability &amp; Observability</h4>
-          <div class="bucket-tags">
-            <span>dbt Tests</span><span>Great Expectations</span><span>DataDog</span><span>Grafana</span><span>Prometheus</span>
-          </div>
-        </div>
-        <div class="skill-bucket">
-          <h4 class="bucket-title">AI-Augmented Development</h4>
-          <div class="bucket-tags">
-            <span>Claude Code</span><span>Cursor</span><span>LLM APIs</span><span>SQL Automation</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Work Together</span>
-        <h2 class="section-title">Let's Connect</h2>
-      </div>
-      <div class="contact-simple" data-aos="fade-up">
-        <p class="contact-lead">
-          I'm interested in Senior Data Engineering, Data Platform, and AI/Data Infrastructure roles
-          where platform ownership, reliability, and scale matter.
-        </p>
-        <div class="contact-simple-actions">
-          <a href="https://www.linkedin.com/in/sneha2095/" target="_blank" rel="noopener" class="btn btn-primary magnetic">LinkedIn</a>
-          <a href="https://github.com/Snehabankapalli" target="_blank" rel="noopener" class="btn btn-secondary magnetic">GitHub</a>
-          <a href="mailto:sneha.bnkp@gmail.com" class="btn btn-secondary magnetic">Email Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">SB<span class="dot">.</span></span>
-        <p class="footer-copy">© 2026 Sneha Bankapalli · Senior Data Engineer</p>
-        <div class="footer-links">
-          <a href="https://github.com/Snehabankapalli" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/sneha2095/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+  <footer class="site-footer">
+    <div class="page-container footer-inner">
+      <span>© 2026 Sneha Bankapalli</span>
+      <div class="footer-links">
+        <a href="https://github.com/Snehabankapalli" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/sneha2095/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
