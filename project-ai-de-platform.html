@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI / Data Engineering Platform — Sneha Bankapalli</title>
+  <meta name="description" content="How I built a multi-repo AI and data engineering platform with 200+ tests, full CI, and production-grade reliability patterns." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Page-level layout ── */
+    .case-hero {
+      padding: 120px 0 64px;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border);
+    }
+    .case-hero .breadcrumb {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .case-hero .breadcrumb a {
+      color: var(--accent-light);
+    }
+    .case-hero .breadcrumb a:hover { opacity: 0.75; }
+    .case-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-light);
+      margin-bottom: 0.75rem;
+    }
+    .case-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+      max-width: 760px;
+      margin-bottom: 1.25rem;
+      line-height: 1.15;
+    }
+    .case-hero-desc {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 640px;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .case-meta-item label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .case-meta-item span {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* ── Body content ── */
+    .case-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+    .case-body h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .case-body h2:first-child { margin-top: 0; }
+    .case-body p {
+      color: var(--text-secondary);
+      font-size: 0.97rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .case-body ul {
+      list-style: disc;
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .case-body ul li { margin-bottom: 0.3rem; }
+
+    /* ── Callout / highlight block ── */
+    .callout {
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      background: rgba(124, 58, 237, 0.07);
+      border-radius: 0 12px 12px 0;
+      margin: 1.5rem 0;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+    .callout strong { color: var(--text-primary); }
+
+    /* ── Code / monospace ── */
+    .mono-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      color: var(--accent-light);
+      background: rgba(124, 58, 237, 0.1);
+      border: 1px solid rgba(124, 58, 237, 0.2);
+      padding: 2px 8px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Repo cards ── */
+    .repo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .repo-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      background: rgba(255,255,255,0.02);
+      transition: border-color 0.2s;
+    }
+    .repo-card:hover { border-color: var(--border-hover); }
+    .repo-card a {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-light);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .repo-card a:hover { opacity: 0.75; }
+    .repo-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .repo-badge {
+      display: inline-flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
+    }
+    .repo-badge span {
+      font-size: 0.72rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 7px;
+      color: var(--text-muted);
+    }
+
+    /* ── Stat row ── */
+    .stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .stat-block {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      background: rgba(255,255,255,0.02);
+      min-width: 130px;
+    }
+    .stat-block .num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent-light);
+      letter-spacing: -0.03em;
+    }
+    .stat-block .lbl {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ── Mock table ── */
+    .mock-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.88rem;
+    }
+    .mock-table th {
+      text-align: left;
+      padding: 0.6rem 1rem;
+      background: rgba(255,255,255,0.04);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--border);
+    }
+    .mock-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .mock-table tr:last-child td { border-bottom: none; }
+    .mock-table td:first-child {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      color: var(--accent-light);
+      white-space: nowrap;
+    }
+
+    /* ── CTA ── */
+    .case-cta {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .case-cta p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .repo-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div id="cursorDot"></div>
+  <div id="cursorGlow"></div>
+  <div id="scrollProgress"></div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">SB</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#systems">Work</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="case-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">snehabankapalli.github.io</a> / ai-de-platform</p>
+      <p class="case-kicker">Flagship Platform &middot; Engineering Deep Dive</p>
+      <h1>AI / Data Engineering Platform</h1>
+      <p class="case-hero-desc">
+        A multi-repo engineering platform built to production standards — with 200+ automated tests,
+        full CI across five repositories, and deliberate mocking strategies for every external dependency.
+        Built to show how I engineer systems, not just what I've shipped.
+      </p>
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <label>Stack</label>
+          <span>Python, PySpark, Kafka, Snowflake, dbt, AWS</span>
+        </div>
+        <div class="case-meta-item">
+          <label>Repos</label>
+          <span>5 repositories</span>
+        </div>
+        <div class="case-meta-item">
+          <label>CI</label>
+          <span>GitHub Actions &middot; pytest, flake8, mypy, SQLFluff</span>
+        </div>
+        <div class="case-meta-item">
+          <label>Coverage</label>
+          <span>80%+ across all repos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <div class="case-body">
+
+    <!-- Why I built this -->
+    <h2>Why I built this</h2>
+    <p>
+      Most portfolio projects stop at the code. They demonstrate a concept — Kafka consumer,
+      dbt model, LLM call — but don't show what production engineering actually looks like:
+      tested code, repeatable CI, mocked dependencies, clear separation of concerns.
+    </p>
+    <p>
+      I built this platform to close that gap. Every repo runs a test suite in GitHub Actions.
+      Every external service (Snowflake, OpenAI, Anthropic, Slack, Kafka) is mocked at the right
+      boundary so tests are fast, deterministic, and infra-free. The architecture patterns are
+      the same ones I'd apply in a production environment.
+    </p>
+    <div class="callout">
+      <strong>The goal:</strong> when a hiring engineer opens any repo in this platform,
+      it should read like work that was already in production — not a demo built to impress.
+    </div>
+
+    <!-- Repos -->
+    <h2>The repositories</h2>
+    <div class="repo-grid">
+      <div class="repo-card">
+        <a href="https://github.com/Snehabankapalli/genai-de-portfolio" target="_blank" rel="noopener">genai-de-portfolio</a>
+        <p>RAG-style chunking and embedding pipeline. Recursive text chunking, OpenAI embedding with retry logic, in-memory cache with hit-rate stats.</p>
+        <div class="repo-badge">
+          <span>Embeddings</span><span>RAG</span><span>Tenacity</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a href="https://github.com/Snehabankapalli/real-time-fintech-pipeline-kafka-spark-snowflake" target="_blank" rel="noopener">real-time-fintech-pipeline</a>
+        <p>Kafka &rarr; Spark &rarr; Snowflake. PII tokenization with HMAC-SHA256, MCC category enrichment, Avro schema validation.</p>
+        <div class="repo-badge">
+          <span>Kafka</span><span>PySpark</span><span>Snowflake</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a href="https://github.com/Snehabankapalli/ai-data-quality-agent" target="_blank" rel="noopener">ai-data-quality-agent</a>
+        <p>Snowflake monitor + Claude-powered diagnosis engine. Detects volume drops, null spikes, and duplicates — routes severity-ranked alerts to Slack.</p>
+        <div class="repo-badge">
+          <span>LLM</span><span>Snowflake</span><span>Slack</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a href="https://github.com/Snehabankapalli/ai-sql-agent-for-data-analytics-automation" target="_blank" rel="noopener">ai-sql-agent</a>
+        <p>Natural language to SQL agent backed by Claude. Structured prompt engineering and response parsing with schema-aware context injection.</p>
+        <div class="repo-badge">
+          <span>Claude API</span><span>SQL</span><span>Agents</span>
+        </div>
+      </div>
+      <div class="repo-card">
+        <a href="https://github.com/Snehabankapalli/fintech-data-platform" target="_blank" rel="noopener">fintech-data-platform</a>
+        <p>Analytics engineering on Snowflake with dbt. SQLFluff linting, YAML schema validation, and CFPB-style reporting models.</p>
+        <div class="repo-badge">
+          <span>dbt</span><span>SQLFluff</span><span>Snowflake</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stat-row">
+      <div class="stat-block">
+        <div class="num">200+</div>
+        <div class="lbl">automated tests</div>
+      </div>
+      <div class="stat-block">
+        <div class="num">5</div>
+        <div class="lbl">CI pipelines</div>
+      </div>
+      <div class="stat-block">
+        <div class="num">80%+</div>
+        <div class="lbl">coverage floor</div>
+      </div>
+      <div class="stat-block">
+        <div class="num">0</div>
+        <div class="lbl">live infra required to test</div>
+      </div>
+    </div>
+
+    <!-- Testing strategy -->
+    <h2>Testing strategy</h2>
+    <p>
+      The constraint I set myself: every test must pass in GitHub Actions with no external
+      infrastructure. No Snowflake cluster. No Kafka broker. No OpenAI credits. No Spark session.
+      That meant building deliberate mock boundaries for each service.
+    </p>
+
+    <table class="mock-table">
+      <thead>
+        <tr>
+          <th>Dependency</th>
+          <th>How it's mocked</th>
+          <th>Why this boundary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Anthropic / Claude API</td>
+          <td><code>unittest.mock.patch</code> on <code>anthropic.Anthropic</code> client, returns structured JSON via <code>MagicMock</code></td>
+          <td>Tests prompt construction and response parsing without API cost or rate limits</td>
+        </tr>
+        <tr>
+          <td>OpenAI embeddings</td>
+          <td>Patched at <code>openai.OpenAI</code> client level; returns fixed-length float arrays</td>
+          <td>Validates batching logic, retry behavior, and cache hit/miss without network calls</td>
+        </tr>
+        <tr>
+          <td>Snowflake connector</td>
+          <td>Cursor mock with <code>fetchall()</code> returning fixtures; connection patched via <code>conftest.py</code></td>
+          <td>Exercises query construction and result mapping without a live warehouse</td>
+        </tr>
+        <tr>
+          <td>Slack webhooks</td>
+          <td><code>requests.post</code> patched at module level, response mocked to <code>200 OK</code></td>
+          <td>Validates Block Kit payload structure and error handling without sending real messages</td>
+        </tr>
+        <tr>
+          <td>PySpark UDFs</td>
+          <td>Pure Python unit tests on underlying functions; Spark context never instantiated</td>
+          <td>Spark session startup adds 30+ seconds and requires JVM — not suitable for fast CI</td>
+        </tr>
+        <tr>
+          <td>Kafka producer</td>
+          <td><code>confluent_kafka.Producer</code> patched; <code>produce()</code> and <code>flush()</code> verified via call assertions</td>
+          <td>Tests serialization and schema compliance without a live broker</td>
+        </tr>
+        <tr>
+          <td>PII secret (HMAC)</td>
+          <td><code>conftest.py</code> sets <code>PII_TOKENIZATION_SECRET</code> before module import to avoid <code>EnvironmentError</code> at load time</td>
+          <td>Module raises at import if env var is missing — secret must be in scope before test collection</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- CI strategy -->
+    <h2>CI strategy</h2>
+    <p>
+      Every repo ships with a <span class="mono-label">.github/workflows/ci.yml</span> that runs on
+      push and pull request to <code>main</code>. The Python repos test across both 3.11 and 3.12
+      via a matrix build.
+    </p>
+    <p>Each CI workflow runs in sequence:</p>
+    <ul>
+      <li><strong>Install dependencies</strong> — lightweight installs only; no Spark, no Kafka cluster spun up</li>
+      <li><strong>Run pytest with coverage</strong> — fails if coverage drops below 80%</li>
+      <li><strong>flake8 lint</strong> — enforces line length and style consistency</li>
+      <li><strong>mypy type check</strong> (where applicable) — strict mode on core modules</li>
+      <li><strong>SQLFluff lint</strong> (dbt repo) — Snowflake dialect, dbt templater</li>
+      <li><strong>Schema validation</strong> (dbt repo) — YAML parse check on <code>schema.yml</code></li>
+    </ul>
+    <div class="callout">
+      The <strong>fintech-data-platform</strong> repo uses <code>continue-on-error: true</code> on SQLFluff
+      deliberately — linting is enforced as a signal, not a hard block, because dbt templating in CI
+      without a real Snowflake profile causes false negatives on <code>{{ ref() }}</code> resolution.
+      The schema validation and non-empty SQL checks are hard failures.
+    </div>
+
+    <!-- What this proves -->
+    <h2>What this proves</h2>
+    <p>
+      Building this platform required making the same decisions I'd make as a senior engineer
+      on a real team: where to draw mock boundaries, how to handle import-time side effects
+      in test environments, when to fail CI hard vs. soft, and how to structure repos so
+      they're navigable to someone new.
+    </p>
+    <ul>
+      <li>I know where abstraction belongs and where it adds noise</li>
+      <li>I can make a test suite fast without sacrificing coverage of real behavior</li>
+      <li>I treat CI as a first-class deliverable, not an afterthought</li>
+      <li>I apply consistent patterns across different problem domains (streaming, LLM, analytics)</li>
+    </ul>
+    <p>
+      The repos are open. The CI logs are public. Read the tests — that's where the real
+      engineering decisions live.
+    </p>
+
+    <!-- CTA -->
+    <div class="case-cta">
+      <a href="https://github.com/Snehabankapalli/genai-de-portfolio" target="_blank" rel="noopener" class="btn btn-primary">View Platform Repos</a>
+      <a href="Sneha_Bankapalli_Resume.pdf" download class="btn btn-secondary">Download Resume</a>
+      <p>or <a href="index.html#contact" style="color:var(--accent-light)">get in touch</a></p>
+    </div>
+
+  </div><!-- /.case-body -->
+
+  <script>
+    // Cursor
+    const dot = document.getElementById('cursorDot');
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
+      glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px';
+    });
+    // Scroll progress
+    window.addEventListener('scroll', () => {
+      const p = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      document.getElementById('scrollProgress').style.width = (p * 100) + '%';
+    });
+    // Hover states
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => { dot.classList.add('large'); glow.classList.add('large'); });
+      el.addEventListener('mouseleave', () => { dot.classList.remove('large'); glow.classList.remove('large'); });
+    });
+  </script>
+
+</body>
+</html>
