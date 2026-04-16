@@ -4,7 +4,7 @@
 
 /* ---------- RESET & BASE ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 14px; }
 body {
   font-family: 'Inter', sans-serif;
   background: #0a0a0f;
@@ -130,7 +130,7 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
   margin-bottom: 16px;
 }
 .section-title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.03em;
@@ -261,7 +261,7 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
 }
 .hero-greeting { font-size: 1.1rem; color: var(--accent-light); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 12px; }
 .hero-name {
-  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.04em;
@@ -273,7 +273,7 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
   background-clip: text;
 }
 .hero-title-wrapper {
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
   font-weight: 600;
   color: var(--text-secondary);
   margin-bottom: 28px;
@@ -285,7 +285,7 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 .hero-tagline {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   max-width: 660px;
   margin: 0 auto 40px;
@@ -304,13 +304,13 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
 .stat { text-align: center; padding: 0 28px; }
 .stat-num {
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 1.9rem;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.04em;
   line-height: 1;
 }
-.stat-plus { color: var(--accent-light); font-size: 1.8rem; font-weight: 800; }
+.stat-plus { color: var(--accent-light); font-size: 1.4rem; font-weight: 800; }
 .stat p { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; font-weight: 500; }
 .stat-divider { width: 1px; height: 48px; background: var(--border); }
 
@@ -1019,4 +1019,115 @@ textarea { resize: vertical; min-height: 120px; }
   .stat { padding: 0; }
   .timeline-header { flex-direction: column; }
   .contact-form-wrapper { padding: 24px; }
+}
+
+/* ============================================================
+   GENAI PROJECTS — HIGHLIGHTED SECTION
+   ============================================================ */
+.genai-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(6,182,212,0.08);
+  border: 1px solid rgba(6,182,212,0.22);
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.project-card.genai-featured {
+  border-color: rgba(6,182,212,0.35);
+  background: linear-gradient(135deg, var(--bg-card), rgba(6,182,212,0.06));
+  box-shadow: 0 0 28px rgba(6,182,212,0.1);
+}
+.project-card.genai-featured:hover {
+  border-color: rgba(6,182,212,0.6);
+  box-shadow: 0 0 40px rgba(6,182,212,0.18);
+}
+.genai-badge {
+  position: absolute;
+  top: 18px; right: 18px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  background: rgba(6,182,212,0.12);
+  border: 1px solid rgba(6,182,212,0.3);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* ============================================================
+   MORE PROJECTS — EXPANDABLE DROPDOWN
+   ============================================================ */
+.more-projects-wrapper {
+  margin-top: 28px;
+}
+.more-projects-toggle {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.more-projects-toggle:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  background: rgba(124,58,237,0.05);
+}
+.more-projects-toggle .toggle-arrow {
+  transition: transform 0.3s ease;
+  font-style: normal;
+}
+.more-projects-toggle.open .toggle-arrow {
+  transform: rotate(180deg);
+}
+.more-projects-content {
+  display: none;
+  padding-top: 18px;
+}
+.more-projects-content.open {
+  display: block;
+}
+
+/* ============================================================
+   CERTIFICATIONS — SUBSECTION LABEL
+   ============================================================ */
+.certs-subsection-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  background: rgba(124,58,237,0.08);
+  border: 1px solid rgba(124,58,237,0.22);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin: 24px 0 14px;
+}
+.cert-card.anthropic {
+  border-color: rgba(124,58,237,0.28);
+  background: linear-gradient(135deg, var(--bg-card), rgba(124,58,237,0.04));
+}
+.cert-card.anthropic:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
