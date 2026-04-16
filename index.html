@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://snehabankapalli.github.io/og-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sneha Bankapalli | Senior Data Engineer" />
-  <meta name="twitter:description" content="Senior Data Engineer with 7+ years building production-grade pipelines across fintech, healthcare, and telecom." />
+  <meta name="twitter:description" content="Senior Data Engineer with 7+ years building production-grade pipelines." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
@@ -21,14 +21,10 @@
 </head>
 <body>
 
-  <!-- SCROLL PROGRESS -->
   <div id="scrollProgress"></div>
-
-  <!-- CURSOR -->
   <div id="cursorDot"></div>
   <div id="cursorGlow"></div>
 
-  <!-- OPEN TO WORK BADGE -->
   <a href="#contact" class="otw-badge" id="otwBadge">
     <span class="otw-dot"></span>
     Open to Opportunities
@@ -40,8 +36,7 @@
       <a href="#hero" class="nav-logo">SB<span class="dot">.</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#flagship">Flagship</a></li>
-        <li><a href="#systems">Systems</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact" class="nav-cta">Hire Me</a></li>
       </ul>
@@ -51,12 +46,10 @@
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#flagship" class="mobile-link">Flagship</a></li>
-      <li><a href="#systems" class="mobile-link">Systems</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
       <li><a href="#experience" class="mobile-link">Experience</a></li>
       <li><a href="#contact" class="mobile-link">Hire Me</a></li>
     </ul>
@@ -64,9 +57,7 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-bg">
-      <canvas id="particleCanvas"></canvas>
-    </div>
+    <div class="hero-bg"><canvas id="particleCanvas"></canvas></div>
     <div class="hero-content">
       <p class="hero-greeting" data-aos="fade-up">Hello, I'm</p>
       <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">Sneha Bankapalli</h1>
@@ -80,7 +71,7 @@
         <strong>real-time pipelines, cloud-native architecture, fintech-grade precision.</strong>
       </p>
       <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-        <a href="#flagship" class="btn btn-primary magnetic">View Flagship System</a>
+        <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
         <a href="#contact" class="btn btn-secondary magnetic">Get In Touch</a>
       </div>
       <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
@@ -135,7 +126,7 @@
     </div>
   </div>
 
-  <!-- ABOUT — SHORT -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
       <div class="about-grid">
@@ -145,6 +136,12 @@
             <div class="avatar-ring ring-2"></div>
             <div class="avatar-ring ring-3"></div>
             <div class="avatar-initials">SB</div>
+          </div>
+          <div class="about-badges">
+            <div class="badge"><span class="badge-icon">☁️</span><span>AWS · Azure</span></div>
+            <div class="badge"><span class="badge-icon">❄️</span><span>Snowflake Expert</span></div>
+            <div class="badge"><span class="badge-icon">⚡</span><span>PySpark · Kafka</span></div>
+            <div class="badge"><span class="badge-icon">🔒</span><span>Regulated Industries</span></div>
           </div>
         </div>
         <div class="about-text" data-aos="fade-left">
@@ -156,16 +153,8 @@
           </p>
           <p>
             I specialize in large-scale batch and real-time streaming using Kafka, PySpark, Snowflake, and AWS.
-            I treat infrastructure cost, SLA adherence, and data quality as first-class engineering constraints.
+            I treat infrastructure cost, SLA adherence, and data quality as first-class engineering constraints — not afterthoughts.
           </p>
-          <div class="about-pills">
-            <span>Kafka · PySpark</span>
-            <span>Snowflake · dbt</span>
-            <span>AWS EMR · Glue</span>
-            <span>Airflow · Terraform</span>
-            <span>HIPAA · Fintech</span>
-            <span>Claude API</span>
-          </div>
           <div class="about-links">
             <a href="https://github.com/Snehabankapalli" target="_blank" rel="noopener" class="about-link">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -181,208 +170,125 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       FLAGSHIP SYSTEM
-       ============================================================ -->
-  <section id="flagship" class="section section-dark">
+  <!-- EXPLORE MY WORK — 4 nav cards -->
+  <section id="explore" class="section section-dark">
     <div class="container">
-
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Flagship System</span>
-        <h2 class="section-title">Real-Time Customer Intelligence Platform</h2>
-        <p class="section-subtitle">End-to-end streaming architecture built for fintech — ingesting financial events, transforming at scale, and serving 50+ downstream consumers with production-grade reliability.</p>
+        <span class="section-tag">Navigation</span>
+        <h2 class="section-title">Explore My Work</h2>
       </div>
-
-      <!-- Architecture Diagram -->
-      <div class="arch-diagram" data-aos="fade-up">
-        <div class="arch-node arch-source">
-          <div class="arch-node-icon">📥</div>
-          <div class="arch-node-label">Event Sources</div>
-          <div class="arch-node-sub">Transactions · Clicks · Feeds</div>
-        </div>
-        <div class="arch-connector">→</div>
-        <div class="arch-node arch-kafka">
-          <div class="arch-node-icon">🌊</div>
-          <div class="arch-node-label">Kafka</div>
-          <div class="arch-node-sub">Schema Registry · DLQ</div>
-        </div>
-        <div class="arch-connector">→</div>
-        <div class="arch-node arch-spark">
-          <div class="arch-node-icon">⚡</div>
-          <div class="arch-node-label">Spark Streaming</div>
-          <div class="arch-node-sub">EMR Serverless</div>
-        </div>
-        <div class="arch-connector">→</div>
-        <div class="arch-node arch-warehouse">
-          <div class="arch-node-icon">❄️</div>
-          <div class="arch-node-label">Snowflake</div>
-          <div class="arch-node-sub">Raw · Staging · Marts</div>
-        </div>
-        <div class="arch-connector">→</div>
-        <div class="arch-node arch-dbt">
-          <div class="arch-node-icon">🔧</div>
-          <div class="arch-node-label">dbt</div>
-          <div class="arch-node-sub">Incremental · SCD Type 2</div>
-        </div>
-        <div class="arch-connector">→</div>
-        <div class="arch-node arch-serving">
-          <div class="arch-node-icon">📊</div>
-          <div class="arch-node-label">BI + APIs</div>
-          <div class="arch-node-sub">50+ Consumers · Dashboards</div>
-        </div>
+      <div class="explore-grid" data-aos="fade-up">
+        <a href="#value" class="explore-card tilt-card">
+          <div class="explore-icon">🏗️</div>
+          <h3>Why Me</h3>
+          <p>What I bring to a data team — scale, reliability, cost obsession, and AI-augmented engineering</p>
+          <span class="explore-arrow">Explore →</span>
+        </a>
+        <a href="#projects" class="explore-card tilt-card">
+          <div class="explore-icon">📦</div>
+          <h3>Projects</h3>
+          <p>Production systems across fintech, healthcare, telecom, and AI engineering</p>
+          <span class="explore-arrow">Explore →</span>
+        </a>
+        <a href="#experience" class="explore-card tilt-card">
+          <div class="explore-icon">💼</div>
+          <h3>Experience</h3>
+          <p>7+ years of career history across regulated, high-scale data environments</p>
+          <span class="explore-arrow">Explore →</span>
+        </a>
+        <a href="#resume" class="explore-card tilt-card">
+          <div class="explore-icon">📄</div>
+          <h3>Resume</h3>
+          <p>Full career timeline, certifications, and downloadable resume</p>
+          <span class="explore-arrow">Explore →</span>
+        </a>
       </div>
-
-      <!-- Observability layer -->
-      <div class="arch-obs-row" data-aos="fade-up">
-        <div class="arch-obs-label">Observability</div>
-        <div class="arch-obs-pills">
-          <span>DataDog · PagerDuty</span>
-          <span>Slack Alerting</span>
-          <span>dbt Tests</span>
-          <span>Great Expectations</span>
-          <span>SLA Monitoring</span>
-        </div>
-      </div>
-
-      <!-- Impact Stats -->
-      <div class="flagship-stats" data-aos="fade-up">
-        <div class="flagship-stat">
-          <span class="flagship-num">1B+</span>
-          <span class="flagship-label">Daily events processed</span>
-        </div>
-        <div class="flagship-stat-divider"></div>
-        <div class="flagship-stat">
-          <span class="flagship-num">24hr → 4hr</span>
-          <span class="flagship-label">Pipeline SLA improvement</span>
-        </div>
-        <div class="flagship-stat-divider"></div>
-        <div class="flagship-stat">
-          <span class="flagship-num">40%</span>
-          <span class="flagship-label">Cloud cost reduction</span>
-        </div>
-        <div class="flagship-stat-divider"></div>
-        <div class="flagship-stat">
-          <span class="flagship-num">99.9%</span>
-          <span class="flagship-label">Uptime over 18 months</span>
-        </div>
-      </div>
-
-      <!-- Design Decisions -->
-      <div class="flagship-subsection" data-aos="fade-up">
-        <h3 class="flagship-subsection-title">4 Design Decisions That Defined This System</h3>
-        <div class="flagship-decisions">
-          <div class="decision-card">
-            <div class="decision-num">01</div>
-            <h4>Schema-First Ingestion</h4>
-            <p>Confluent Schema Registry with Avro enforcement at publish time, not consume time. Prevented 3 downstream outages caused by upstream schema drift. Any invalid event hits a dead-letter queue with automatic Slack alerting before it can corrupt warehouse state.</p>
-          </div>
-          <div class="decision-card">
-            <div class="decision-num">02</div>
-            <h4>Serverless-First Compute</h4>
-            <p>EMR Serverless over long-running clusters. Each Spark job provisions, runs, and tears down independently. Idle compute drops to zero between runs. This single change delivered 60% reduction in cluster idle time and eliminated the 2am "cluster stuck" class of incidents.</p>
-          </div>
-          <div class="decision-card">
-            <div class="decision-num">03</div>
-            <h4>Incremental dbt With SCD Type 2</h4>
-            <p>Full refreshes replaced with incremental strategies and Slowly Changing Dimension Type 2 on customer dimension tables. Transformation time cut by 75%. History preserved for auditability — critical for fintech compliance requirements.</p>
-          </div>
-          <div class="decision-card">
-            <div class="decision-num">04</div>
-            <h4>Tiered SLA Alerting</h4>
-            <p>DataDog monitors with P1/P2/P3 severity tiers mapped to business impact. P1 pages oncall within 2 minutes. P2 Slack channel. P3 next-business-day ticket. Result: incident response time dropped from 4 hours to 45 minutes average.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Production Incident + Cost Optimization — two column -->
-      <div class="flagship-two-col" data-aos="fade-up">
-
-        <div class="flagship-block incident-block">
-          <div class="block-tag block-tag-red">Production Incident</div>
-          <h4>3am Schema Drift — What Actually Happened</h4>
-          <p>Upstream team added a required Kafka field without coordinating. Spark job failed silently on deserialization. No alert fired. By morning, 6 hours of transaction data had missed the warehouse load window.</p>
-          <div class="incident-timeline">
-            <div class="incident-step">
-              <span class="step-dot red"></span>
-              <span><strong>Root cause:</strong> No schema registry enforcement — consumers accepted any payload shape</span>
-            </div>
-            <div class="incident-step">
-              <span class="step-dot yellow"></span>
-              <span><strong>Immediate fix:</strong> Dead-letter queue with deserialization error alerting deployed same day</span>
-            </div>
-            <div class="incident-step">
-              <span class="step-dot green"></span>
-              <span><strong>Permanent fix:</strong> Schema Registry enforced at producer level — breaking changes now blocked at publish, not discovered at 3am</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flagship-block cost-block">
-          <div class="block-tag block-tag-green">Cost Optimization</div>
-          <h4>How We Cut Spark Compute Cost by 40%</h4>
-          <p>EMR Serverless migration was step one, but the larger savings came from job-level tuning.</p>
-          <div class="cost-items">
-            <div class="cost-item">
-              <span class="cost-icon">💡</span>
-              <div>
-                <strong>Intelligent partitioning</strong>
-                <span>Partition by date + region reduced shuffle overhead by 35%</span>
-              </div>
-            </div>
-            <div class="cost-item">
-              <span class="cost-icon">⚡</span>
-              <div>
-                <strong>Executor right-sizing</strong>
-                <span>Per-job executor configs based on actual data volume profiling</span>
-              </div>
-            </div>
-            <div class="cost-item">
-              <span class="cost-icon">🔁</span>
-              <div>
-                <strong>Spot instance strategy</strong>
-                <span>Non-critical batch jobs migrated to spot — 60% cheaper with graceful retry</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Business Impact -->
-      <div class="flagship-impact-summary" data-aos="fade-up">
-        <div class="block-tag block-tag-purple">Business Impact</div>
-        <div class="impact-summary-grid">
-          <div class="impact-summary-item">
-            <h4>50+ Downstream Consumers</h4>
-            <p>Analytics teams, BI dashboards, fraud detection, and risk models all served from this single platform — with data freshness SLAs met 99.9% of the time.</p>
-          </div>
-          <div class="impact-summary-item">
-            <h4>Zero Data Loss Events</h4>
-            <p>18 months of production operation with zero confirmed data loss events. Dead-letter queues, schema validation, and idempotent writes made this achievable.</p>
-          </div>
-          <div class="impact-summary-item">
-            <h4>Reduced Operational Overhead</h4>
-            <p>From 6+ hours/week of pipeline babysitting to under 30 minutes. Observability investment compounded — every alert added reduced the next incident response time.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ============================================================
-       SELECTED SYSTEMS
-       ============================================================ -->
-  <section id="systems" class="section">
+  <!-- WHY ME / BUILT FOR SCALE -->
+  <section id="value" class="section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Production Systems</span>
-        <h2 class="section-title">Selected Systems</h2>
-        <p class="section-subtitle">A focused set of systems built across fintech, healthcare, telecom, and AI engineering.</p>
+        <span class="section-tag">What I Bring</span>
+        <h2 class="section-title">Built for Scale</h2>
+        <p class="section-subtitle">Proven across fintech, healthcare, and telecom — I bring systems thinking, regulatory experience, and AI-augmented engineering to any data team.</p>
+      </div>
+      <div class="value-grid">
+
+        <div class="value-card tilt-card" data-aos="fade-up">
+          <div class="value-icon-wrap purple"><span>🏗️</span></div>
+          <h3>System-Scale Thinking</h3>
+          <p>Designed pipelines processing <strong>1B+ daily events</strong> and data lakes ingesting <strong>10TB+/month</strong>. I don't just write code — I architect for failure modes, SLAs, and 10x growth from day one.</p>
+          <div class="value-tags"><span>Distributed Systems</span><span>High Throughput</span><span>Fault Tolerance</span></div>
+        </div>
+
+        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-icon-wrap teal"><span>🤖</span></div>
+          <h3>AI-Augmented Engineering</h3>
+          <p>Using <strong>Claude API, Cursor, and Claude Code</strong> daily to automate data workflows, scaffold infrastructure, and build intelligent pipeline tooling — shipped into production, not just experiments.</p>
+          <div class="value-tags"><span>Claude API</span><span>Cursor</span><span>Claude Code</span><span>Prompt Engineering</span></div>
+        </div>
+
+        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="value-icon-wrap green"><span>💰</span></div>
+          <h3>Cost-Obsessed Architecture</h3>
+          <p>Delivered <strong>40% cloud cost reduction</strong> through EMR Serverless migration, intelligent partitioning, and right-sizing. I treat infrastructure spend as a product metric, not an afterthought.</p>
+          <div class="value-tags"><span>FinOps</span><span>Serverless-First</span><span>Cost Modeling</span></div>
+        </div>
+
+        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-icon-wrap orange"><span>🔒</span></div>
+          <h3>Regulated-Industry Proven</h3>
+          <p>HIPAA-compliant healthcare data lakes, fintech transaction pipelines with audit trails, and telecom systems at carrier scale. Security and compliance aren't checklists — they're design constraints.</p>
+          <div class="value-tags"><span>HIPAA</span><span>SOC 2 Adjacent</span><span>PII Masking</span></div>
+        </div>
+
+        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="value-icon-wrap blue"><span>📊</span></div>
+          <h3>Full Stack Data Ownership</h3>
+          <p>Owns the full lifecycle — ingestion → transformation → quality → delivery → observability. I've been the single engineer who kept a data platform running for 50+ downstream consumers.</p>
+          <div class="value-tags"><span>Data Ownership</span><span>dbt + Airflow</span><span>Observability</span></div>
+        </div>
+
+        <div class="value-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-icon-wrap pink"><span>🚀</span></div>
+          <h3>Ship Fast, Stay Reliable</h3>
+          <p>7+ years building in fast-moving environments — fintech, healthcare, telecom. I've learned when to move fast and when the cost of cutting corners is too high. That judgment is rare.</p>
+          <div class="value-tags"><span>Production Grade</span><span>CI/CD</span><span>Zero-Downtime Deploys</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Engineering Work</span>
+        <h2 class="section-title">Featured Projects</h2>
       </div>
       <div class="projects-grid">
 
-        <div class="project-card tilt-card" data-aos="fade-up">
+        <div class="project-card featured tilt-card" data-aos="fade-up">
+          <div class="project-tag">Featured</div>
+          <div class="project-header">
+            <span class="project-icon">🌊</span>
+            <div class="project-links">
+              <a href="https://github.com/Snehabankapalli/real-time-fintech-pipeline-kafka-spark-snowflake" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Real-Time Financial Streaming Pipeline</h3>
+          <p>End-to-end Kafka → PySpark → Snowflake streaming pipeline for financial transaction processing. Schema registry, dead-letter queues, backpressure handling, and Slack-based incident alerting. Processes <strong>1M+ events/day</strong> at sub-second latency.</p>
+          <div class="project-tech">
+            <span>Kafka</span><span>PySpark</span><span>Snowflake</span><span>AWS EMR</span><span>Python</span><span>DataDog</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="100">
           <div class="project-header">
             <span class="project-icon">🏥</span>
             <div class="project-links">
@@ -392,13 +298,13 @@
             </div>
           </div>
           <h3>HIPAA-Compliant Healthcare Data Lake</h3>
-          <p>AWS Glue + S3 data lake ingesting 10TB+/month from 20+ clinical source systems. Automated PII masking, encryption-at-rest, audit logging, and federal compliance reporting.</p>
+          <p>AWS Glue + S3 data lake ingesting 10TB+/month from 20+ clinical systems. Automated PII masking, encryption-at-rest, audit logging, and compliance reporting for federal healthcare mandates.</p>
           <div class="project-tech">
             <span>AWS Glue</span><span>S3</span><span>Python</span><span>HIPAA</span><span>Airflow</span>
           </div>
         </div>
 
-        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="150">
           <div class="project-header">
             <span class="project-icon">🤖</span>
             <div class="project-links">
@@ -408,13 +314,13 @@
             </div>
           </div>
           <h3>AI Data Quality Agent</h3>
-          <p>Claude API-powered agent that autonomously monitors Snowflake tables for schema drift, null anomalies, and volume spikes — triggers Slack alerts and auto-generates remediation SQL.</p>
+          <p>Claude API-powered agent that monitors Snowflake tables for schema drift, null anomalies, and volume spikes — triggers Slack alerts and auto-generates remediation SQL. Zero manual intervention.</p>
           <div class="project-tech">
             <span>Claude API</span><span>Python</span><span>Snowflake</span><span>Slack</span><span>dbt Tests</span>
           </div>
         </div>
 
-        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="200">
           <div class="project-header">
             <span class="project-icon">📡</span>
             <div class="project-links">
@@ -430,34 +336,19 @@
           </div>
         </div>
 
-        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="project-header">
-            <span class="project-icon">🧠</span>
-            <div class="project-links">
-              <a href="https://github.com/Snehabankapalli/ai-sql-agent-for-data-analytics-automation" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3>AI SQL Agent for Data Analytics</h3>
-          <p>Natural language to SQL agent with automated reporting. Converts plain-English queries into optimized Snowflake SQL and delivers scheduled analytics reports with no manual intervention.</p>
-          <div class="project-tech">
-            <span>Claude API</span><span>Python</span><span>Snowflake</span><span>LLM</span><span>Automation</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section section-dark">
+  <section id="experience" class="section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="section-tag">Career</span>
         <h2 class="section-title">Experience</h2>
       </div>
       <div class="timeline">
+
         <div class="timeline-item" data-aos="fade-up">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
@@ -523,33 +414,61 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Certifications — compact -->
-      <div class="certs-compact" data-aos="fade-up">
-        <h3 class="certs-compact-title">Certifications &amp; Education</h3>
-        <div class="certs-compact-grid">
-          <div class="cert-pill">🔷 Azure Data Engineer · DP-203</div>
-          <div class="cert-pill">☁️ Azure Fundamentals · AZ-900</div>
-          <div class="cert-pill">⚙️ Six Sigma</div>
-          <div class="cert-pill">📋 ITIL Foundation</div>
-          <div class="cert-pill">🎓 MS IT · Valparaiso University</div>
-          <div class="cert-pill">🎓 BTech ECE · JNTUK</div>
-        </div>
-        <div class="certs-compact-label">Anthropic · AI Certifications · Apr 2026</div>
-        <div class="certs-compact-grid">
-          <div class="cert-pill cert-pill-ai">🤖 Building with the Claude API</div>
-          <div class="cert-pill cert-pill-ai">🧠 Claude 101</div>
-          <div class="cert-pill cert-pill-ai">⚡ Claude Code 101</div>
-          <div class="cert-pill cert-pill-ai">🛠️ Claude Code in Action</div>
-          <div class="cert-pill cert-pill-ai">🤝 Introduction to Claude Cowork</div>
-        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- CORE STACK — compact strip -->
+  <!-- RESUME -->
+  <section id="resume" class="section section-dark">
+    <div class="container">
+      <div class="resume-block" data-aos="fade-up">
+        <div class="resume-block-left">
+          <span class="section-tag">Resume</span>
+          <h2 class="section-title" style="margin-top:14px;">Full Background</h2>
+          <p class="section-subtitle" style="margin-top:8px;">Complete career timeline, certifications, and technical depth.</p>
+          <a href="Sneha_Bankapalli_Resume.pdf" class="btn btn-primary magnetic" style="margin-top:28px;" download>Download Resume</a>
+        </div>
+        <div class="resume-block-right">
+          <div class="resume-certs">
+            <div class="resume-cert-group">
+              <div class="resume-cert-label">Microsoft</div>
+              <div class="resume-cert-pills">
+                <span>Azure Data Engineer · DP-203</span>
+                <span>Azure Fundamentals · AZ-900</span>
+              </div>
+            </div>
+            <div class="resume-cert-group">
+              <div class="resume-cert-label">Other</div>
+              <div class="resume-cert-pills">
+                <span>Six Sigma</span>
+                <span>ITIL Foundation</span>
+              </div>
+            </div>
+            <div class="resume-cert-group">
+              <div class="resume-cert-label">Anthropic · Apr 2026</div>
+              <div class="resume-cert-pills resume-cert-pills-ai">
+                <span>Building with the Claude API</span>
+                <span>Claude 101</span>
+                <span>Claude Code 101</span>
+                <span>Claude Code in Action</span>
+                <span>Intro to Claude Cowork</span>
+              </div>
+            </div>
+            <div class="resume-cert-group">
+              <div class="resume-cert-label">Education</div>
+              <div class="resume-cert-pills">
+                <span>MS IT · Valparaiso University</span>
+                <span>BTech ECE · JNTUK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE STACK -->
   <section id="stack" class="section">
     <div class="container">
       <div class="stack-strip-header" data-aos="fade-up">
@@ -563,9 +482,9 @@
         <span>Airflow</span>
         <span>dbt</span>
         <span>Terraform</span>
-        <span>Python · SQL</span>
-        <span>Observability</span>
-        <span>Claude API</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Data Quality</span>
       </div>
     </div>
   </section>
@@ -603,8 +522,6 @@
               </div>
             </a>
           </div>
-
-          <!-- Terminal snippet -->
           <div class="terminal-card" data-aos="fade-up">
             <div class="terminal-header">
               <span class="t-dot t-red"></span>
@@ -615,7 +532,6 @@
             <div class="terminal-body" id="terminalBody"></div>
           </div>
         </div>
-
         <div class="contact-form-wrapper" data-aos="fade-left">
           <form class="contact-form" id="contactForm">
             <div class="form-row">

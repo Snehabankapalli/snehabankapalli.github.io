@@ -1479,3 +1479,146 @@ textarea { resize: vertical; min-height: 120px; }
   .arch-connector { transform: rotate(90deg); align-self: center; padding: 6px 0; }
   .core-stack-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   EXPLORE MY WORK — NAV CARDS
+   ============================================================ */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.explore-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--teal));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.explore-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+.explore-card:hover::before { transform: scaleX(1); }
+.explore-icon { font-size: 2rem; line-height: 1; }
+.explore-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.explore-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+.explore-arrow {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+.explore-card:hover .explore-arrow { color: var(--teal); }
+
+@media (max-width: 900px) {
+  .explore-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .explore-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   RESUME SECTION — TWO-COLUMN BLOCK
+   ============================================================ */
+.resume-block {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 64px;
+  align-items: start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px;
+}
+.resume-block-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.resume-block-right {}
+
+.resume-certs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.resume-cert-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.resume-cert-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-light);
+}
+.resume-cert-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.resume-cert-pills span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-secondary);
+  transition: border-color 0.2s, color 0.2s;
+}
+.resume-cert-pills span:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+.resume-cert-pills-ai span {
+  background: rgba(124,58,237,0.08);
+  border-color: rgba(124,58,237,0.25);
+  color: var(--accent-light);
+}
+.resume-cert-pills-ai span:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .resume-block {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .resume-block { padding: 24px; }
+}
