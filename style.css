@@ -1408,6 +1408,31 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 /* ============================================================
+   CORE STACK — COMPACT STRIP
+   ============================================================ */
+.stack-strip-header { margin-bottom: 20px; }
+.stack-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.stack-strip span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-secondary);
+  transition: border-color 0.2s, color 0.2s;
+}
+.stack-strip span:hover {
+  border-color: var(--accent-light);
+  color: var(--text-primary);
+}
+
+/* ============================================================
    CERTIFICATIONS — COMPACT
    ============================================================ */
 .certs-compact { margin-top: 56px; }
