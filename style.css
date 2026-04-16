@@ -693,6 +693,24 @@ button, [role="button"], .tilt-card, .tab-btn, .skill-tag { cursor: none !import
 .contact-label { display: block; font-size: 0.78rem; color: var(--text-muted); font-weight: 500; margin-bottom: 2px; }
 .contact-value { font-size: 0.92rem; color: var(--text-primary); font-weight: 600; }
 
+/* Contact simplified layout */
+.contact-simple {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-links-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-links-row .contact-item {
+  flex: 1;
+  min-width: 220px;
+}
+
 /* Terminal */
 .terminal-card {
   background: #0d0d0d;

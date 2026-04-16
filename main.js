@@ -410,7 +410,7 @@ if (heroSection) {
 
 /* ---------- CONTACT FORM (Formspree) ---------- */
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', async (e) => {
+if (contactForm) contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = contactForm.querySelector('.form-submit');
   const orig = btn.textContent;
